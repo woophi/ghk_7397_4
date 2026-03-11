@@ -60,7 +60,7 @@ export const useStocksData = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://gist.githubusercontent.com/nsdooris/a3b39707cdd7045ced1ef222543c3461/raw/');
+      const response = await fetch('https://gist.githubusercontent.com/nsdooris/f37fc0d2a764c53dc81cdfd4ba66ac2e/raw/');
       const data = (await response.json()) as GistResponse;
       setStocks({
         yes: data.yes.map(item => ({ ...item, img: TICKER_TO_IMAGE[item.ticker] })),
