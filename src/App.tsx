@@ -44,7 +44,12 @@ export const App = () => {
 
         {stocks.no.map(stock => {
           return (
-            <PureCell onClick={() => window.location.replace(stock.link)}>
+            <PureCell
+              onClick={() => {
+                window.gtag('event', '7397_choose_security', { var: 'var4', security_ticker: stock.ticker });
+                window.location.replace(stock.link);
+              }}
+            >
               <PureCell.Graphics verticalAlign="center" key={stock.ticker}>
                 <img src={stock.img} width={48} height={48} alt={stock.ticker} />
               </PureCell.Graphics>
@@ -94,7 +99,12 @@ export const App = () => {
 
         {stocks.yes.map(stock => {
           return (
-            <PureCell onClick={() => window.location.replace(stock.link)}>
+            <PureCell
+              onClick={() => {
+                window.gtag('event', '7397_choose_security', { var: 'var4', security_ticker: stock.ticker });
+                window.location.replace(stock.link);
+              }}
+            >
               <PureCell.Graphics verticalAlign="center" key={stock.ticker}>
                 <img src={stock.img} width={48} height={48} alt={stock.ticker} />
               </PureCell.Graphics>
@@ -173,7 +183,10 @@ export const App = () => {
                   block
                   view="secondary"
                   className={getAnswerButtonClassName('yes')}
-                  onClick={() => setSelectedOption('yes')}
+                  onClick={() => {
+                    window.gtag('event', '7397_click_answer', { var: 'var4', answer: 'yes' });
+                    setSelectedOption('yes');
+                  }}
                 >
                   Да
                 </Button>
@@ -182,7 +195,10 @@ export const App = () => {
                   block
                   view="secondary"
                   className={getAnswerButtonClassName('no')}
-                  onClick={() => setSelectedOption('no')}
+                  onClick={() => {
+                    window.gtag('event', '7397_click_answer', { var: 'var4', answer: 'no' });
+                    setSelectedOption('no');
+                  }}
                 >
                   Нет
                 </Button>
