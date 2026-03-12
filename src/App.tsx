@@ -30,7 +30,7 @@ export const App = () => {
           view="medium"
           font="system"
           weight="semibold"
-          color="primary-inverted"
+          color="primary"
           style={{
             marginTop: '1rem',
           }}
@@ -59,7 +59,7 @@ export const App = () => {
               </PureCell.Content>
               <PureCell.Addon verticalAlign="top">
                 <Typography.Text view="primary-medium" weight="medium">
-                  {stock.price.toLocaleString('ru-RU')} ₽
+                  {stock.price.toLocaleString('ru-RU')}&nbsp;₽
                 </Typography.Text>
               </PureCell.Addon>
             </PureCell>
@@ -80,7 +80,7 @@ export const App = () => {
           view="medium"
           font="system"
           weight="semibold"
-          color="primary-inverted"
+          color="primary"
           style={{
             marginTop: '1rem',
           }}
@@ -109,7 +109,7 @@ export const App = () => {
               </PureCell.Content>
               <PureCell.Addon verticalAlign="top">
                 <Typography.Text view="primary-medium" weight="medium">
-                  {stock.price.toLocaleString('ru-RU')} ₽
+                  {stock.price.toLocaleString('ru-RU')}&nbsp;₽
                 </Typography.Text>
               </PureCell.Addon>
             </PureCell>
